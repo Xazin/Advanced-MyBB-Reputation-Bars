@@ -230,12 +230,11 @@ if (!$mybb->input['action'])
 			die();
 		}
 
-		/* Placeholder Comment: Requires Language Abstraction for the Form:EDIT */
 		$form = new Form("index.php?module=user-advrepbars&amp;action=edit", "post", "advrepbars", true);
 		
 		$form_container = new FormContainer($lang->advrepbars_form_edit_title);
 		echo $form->generate_hidden_field('bid', $stripped_bid);
-		$form_container->output_row("Name", 'Give your reputation bar a name, this is used only for the legends page <a href="../advrepbars.php">viewed here</a>', $form->generate_text_box('name', $repbar['name'], array('id' => 'name'), 'name'));
+		$form_container->output_row($lang->advrepbars_form_input_name, $lang->advrepbars_form_input_name_desc, $form->generate_text_box('name', $repbar['name'], array('id' => 'name'), 'name'));
 		$form_container->output_row($lang->advrepbars_form_input_level, $lang->advrepbars_form_input_level_desc, $form->generate_numeric_field('level', $repbar['level'], array('id' => 'level', 'min' => 0), 'level'));
 		$form_container->output_row($lang->advrepbars_form_input_bgcolor, $lang->advrepbars_form_input_bgcolor_desc, $form->generate_text_box('bgcolor', $repbar['bgcolor'], array('id' => 'bgcolor'), 'bgcolor'));
 		$form_container->output_row($lang->advrepbars_form_input_fontstyle, $lang->advrepbars_form_input_fontstyle_desc, $form->generate_text_box('fontstyle', $repbar['fontstyle'], array('id' => 'fontstyle'), 'fontstyle'));		

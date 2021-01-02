@@ -30,6 +30,9 @@ $l['advrepbars_form_new_succes'] = "Successfully added reputation bar";
 $l['advrepbars_form_delete_success'] = "Successfully deleted reputation bar";
 
 /* INPUTS */
+$l['advrepbars_form_input_name'] = "Name";
+$l['advrepbars_form_input_name_desc'] = "Give your reputation bar a name, this is used only for the legends page <a href=\"../advrepbars.php\">viewed here</a>";
+
 $l['advrepbars_form_input_level'] = "Level";
 $l['advrepbars_form_input_level_desc'] = "The required minimum reputation a user must achieve to have this reputation bar";
 
