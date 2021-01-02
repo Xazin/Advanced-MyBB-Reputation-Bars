@@ -23,7 +23,7 @@ if (!empty($advrepbars))
         $color = '';
         $background = $advrepbar['bgcolor'];
         $fontstyle = $advrepbar['fontstyle'];
-        $max_width = '300px';
+        $max_width = 'max-width: 300px';
         eval("\$repbar = \"".$templates->get("repbars_18_bar")."\";");
         $repbar = '<div style="margin-bottom:15px;width:200px;"><fieldset><legend>'.$advrepbar['name'].'</legend>'.$repbar.'</fieldset></div>';
 
