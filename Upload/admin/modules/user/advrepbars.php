@@ -276,21 +276,3 @@ if (!$mybb->input['action'])
 }
 
 $page->output_footer($lang->advrepbars_title_acronym);
-
-/* Cache Functionality */
-function update_cache()
-{
-	global $mybb, $db;
-
-	$advrepbars = array();
-
-	/* Grab all Reputation Bars */
-	$advrepbars_query = $db->simple_select("advrepbars_bars", "*", "", array("order_by" => "level", "order_dir" => "ASC"));
-	
-	while ($advrepbar = $db->fetch_array($advrepbars_query))
-	{
-		array_push($advrepbars, $advrepbar);
-	}
-
-	$mybb->cache->update('advrepbars', $advrepbars);
-}
