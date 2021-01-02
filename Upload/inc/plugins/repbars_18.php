@@ -97,6 +97,8 @@ function repbars_18_install() {
         );
 
         $db->insert_query("advrepbars_bars", $repbar);
+
+        update_cache();
     }
 }
 
@@ -188,7 +190,8 @@ function repbars_18_activate() {
 		{$headerinclude}
 	</head>
 <body>
-	{$header}
+    {$header}
+    <h2>{$lang->repbars_18_reputation_bars}</h2>
 	<div class="border-wrapper">
 		{$advrepbars_templ}
 	</div>
@@ -227,7 +230,7 @@ function repbars_18_deactivate() {
 }
 
 function repbars_18_parse(&$post) {
-    global $mybb, $templates, $repbars_18, $templates, $lang, $color, $background, $rep, $max_width, $br_above_label;
+    global $mybb, $templates, $repbars_18, $templates, $lang, $background, $rep, $max_width, $br_above_label;
 
     // Grab all Reputation Bars
     $advrepbars = $mybb->cache->read('advrepbars');
@@ -362,6 +365,28 @@ function repbars_18_profile() {
 function repbars_18_loadlang() {
     global $lang; 
     $lang->load("repbars_18");
+}
+
+/* Cache Functionality */
+function update_cache()
+{
+	global $mybb, $db;
+
+	$advrepbars = array();
+
+	/* Grab all Reputation Bars */
+	$advrepbars_query = $db->simple_select("advrepbars_bars", "*", "", array("order_by" => "level", "order_dir" => "ASC"));
+	if ($db->num_rows($advrepbars_query) <= 0)
+	{
+		unset($advrepbars);
+	} else {
+		while ($advrepbar = $db->fetch_array($advrepbars_query))
+		{
+			array_push($advrepbars, $advrepbar);
+		}
+	}
+
+	$mybb->cache->update('advrepbars', $advrepbars);
 }
 
 /* AdminCP Functions - Do not edit below here */

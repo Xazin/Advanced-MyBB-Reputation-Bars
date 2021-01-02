@@ -4,9 +4,9 @@ $templatelist = "repbars_18_bar,repbars_18_legend";
 
 define('IN_MYBB', 1); require "./global.php";
 
-//$lang->load("advrepbars");
+$lang->load("repbars_18");
 
-add_breadcrumb("Reputation Bars Legend", "advrepbars.php");
+add_breadcrumb($lang->repbars_18_reputation_bars_legend, "advrepbars.php");
 
 /* We only need one page for the legend */
 /* Generate the repbars */
@@ -30,7 +30,7 @@ if (!empty($advrepbars))
         $advrepbars_templ .= $repbar;
     }
 } else {
-    $advrepbars_templ = "<span>There currently exists no Reputation Bars</span>";
+    $advrepbars_templ = "<span>".$lang->repbars_18_no_reputation_bars."</span>";
 }
 
 
