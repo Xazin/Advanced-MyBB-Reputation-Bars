@@ -26,7 +26,7 @@ $l['advrepbars_form_delete_error'] = "Could not delete reputation bar, the bar d
 $l['advrepbars_form_edit_error'] = "Reputation bar does not exist and cannot be edited";
 
 /* SUCCESS */
-$l['advrepbars_form_new_succes'] = "Successfully added reputation bar";
+$l['advrepbars_form_new_success'] = "Successfully added reputation bar";
 $l['advrepbars_form_delete_success'] = "Successfully deleted reputation bar";
 
 /* INPUTS */
