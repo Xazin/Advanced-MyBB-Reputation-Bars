@@ -44,9 +44,9 @@ function repbars_18_info() {
 	return array(
 		'name'	        =>  htmlspecialchars($lang->repbars_18_title),
 		'description'	=>  htmlspecialchars($lang->repbars_18_desc),
-		'website'		=>  'http://www.kasscode.com',
+		'website'		=>  'https://www.mathiasm.com',
 		'author'		=>  'Xazin / GodLess101',
-		'authorsite'	=>  'http://www.kasscode.com',
+		'authorsite'	=>  'https://www.mathiasm.com',
 		'codename' 		=>  'repbars_18',
 		'version'		=>  '2.0',
 		"compatibility"	=>  "18*"
@@ -235,6 +235,11 @@ function repbars_18_parse(&$post) {
     // Grab all Reputation Bars
     $advrepbars = $mybb->cache->read('advrepbars');
 
+    if (empty($advrepbars))
+    {
+        return;
+    }
+
     $max_width = "";
     $br_above_label = "<br />"; 
 
@@ -298,6 +303,11 @@ function repbars_18_profile() {
     global $mybb, $templates, $memprofile, $repbars_18, $templates, $lang, $background, $rep, $max_width, $br_above_label;
     // Grab all Reputation Bars
     $advrepbars = $mybb->cache->read('advrepbars');
+
+    if (empty($advrepbars))
+    {
+        return;
+    }
 
     $max_width = "max-width:200px";
     $br_above_label = "<br />"; 
