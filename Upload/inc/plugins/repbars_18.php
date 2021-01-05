@@ -177,7 +177,7 @@ function repbars_18_activate() {
     {$br_above_label}
     <div style="margin-top:3px;padding:0px;padding-right:3px;margin-right:5px;{$max_width};min-width:115px" title="{$lang->repbars_18_reputation}">
         <div class="rep-meter" style="border-radius:4px;padding:2px;padding-right:5px;border:1px solid #cccccc;width:100%; ">
-            <div class="rep-meter-inner" style="background:{$background};width:{$rep}%;min-width:20px;text-align:left;padding-left:2px;">
+            <div class="rep-meter-inner" style="background:{$background};width:{$rep}%;min-width:15px;text-align:left;padding-left:2px;">
                 <span style="margin-left:5px;{$fontstyle}">{$post[\'reputation\']}</span>
             </div>
         </div>    
