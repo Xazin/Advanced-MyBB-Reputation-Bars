@@ -1,5 +1,15 @@
 <?php
 
+/* SETTINGS */
+$l['repbars_18_title'] = "Advanced Reputation Bars";
+$l['repbars_18_desc'] = "Displays advanced reputation bars on the user's postbit.";
+
+$l['repbars_18_postbit'] = "Enable on Postbit?";
+$l['repbars_18_postbit_desc'] = "This setting determines whether this plugin displays the reputation bar on posts.";
+
+$l['repbars_18_profile'] = "Enable on Profile?";
+$l['repbars_18_profile_desc'] = "This setting determines whether the reputation bar will be displayed on the user's profile.";
+
 /* PAGE DETAILS */
 $l['advrepbars_title'] = "Advanced Reputation Bars";
 $l['advrepbars_title_acronym'] = "Adv. Reputation Bars";
@@ -43,4 +53,3 @@ $l['advrepbars_form_input_fontstyle'] = "Font Style";
 $l['advrepbars_form_input_fontstyle_desc'] = "Customize the span containing the amount of reputation on the bar, this input will populate the style attribute";
 
 $l['advrepbars_form_submit_save'] = "Save Reputation Bar";
-
